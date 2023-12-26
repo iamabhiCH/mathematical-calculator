@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Calculator</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <audio id="btnSound">
+            <source src="mouse-click-153941.mp3" type="audio/mpeg" />
+        </audio>
+
+        <div class="calculator">
+            <div class="display">
+                <input type="text" id="res" readonly />
+            </div>
+
+            <div class="theme-switch">
+                <input type="checkbox" id="themeToggle" />
+                <label for="themeToggle" class="theme-toggle-label"></label>
+            </div>
+
+            <div class="keys">
+                <button onclick="removeOneChar()"> 
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="w-6 h-6"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M12 9.75 14.25 12m0 0 2.25 2.25M14.25 12l2.25-2.25M14.25 12 12 14.25m-2.58 4.92-6.374-6.375a1.125 1.125 0 0 1 0-1.59L9.42 4.83c.21-.211.497-.33.795-.33H19.5a2.25 2.25 0 0 1 2.25 2.25v10.5a2.25 2.25 0 0 1-2.25 2.25h-9.284c-.298 0-.585-.119-.795-.33Z"
+                        />
+                    </svg>
+                </button>
+                <button onclick="clearResult()">AC</button>
+                <button onclick="appendToresult('%')">%</button>
+                <button onclick="appendToresult('/')">/</button>
+                <button onclick="appendToresult('7')">7</button>
+                <button onclick="appendToresult('8')">8</button>
+                <button onclick="appendToresult('9')">9</button>
+                <button onclick="appendToresult('*')">*</button>
+                <button onclick="appendToresult('4')">4</button>
+                <button onclick="appendToresult('5')">5</button>
+                <button onclick="appendToresult('6')">6</button>
+                <button onclick="appendToresult('-')">-</button>
+                <button onclick="appendToresult('1')">1</button>
+                <button onclick="appendToresult('2')">2</button>
+                <button onclick="appendToresult('3')">3</button>
+                <button onclick="appendToresult('+')">+</button>
+                <button onclick="appendToresult('0')">0</button>
+                <button onclick="appendToresult('.')">.</button>
+                <button onclick="calculate()" class="equalBtn">=</button>
+            </div>
+        </div>
+    </body>
+    <script src="script.js"></script>
+</html>
